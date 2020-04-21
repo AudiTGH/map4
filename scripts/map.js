@@ -118,7 +118,7 @@ $(window).on('load', function() {
 	map.removeLayer(markersLayer); // sinon les markers "fictifs" deviennent visibles
 	
 	// test list markers
-	var list = 	 new L.Control.ListMarkers({layer: markersLayer,itemIcon: null , maxItems: 15, maxZoom: 16});
+	var list = 	 new L.Control.ListMarkers({layer: markersLayer,itemIcon: null , maxItems: 8, maxZoom: 16});
 	map.addControl(list);
 	
 	// test GeoJson
