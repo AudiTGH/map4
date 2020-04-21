@@ -138,7 +138,7 @@ $(window).on('load', function() {
 			},		
 			//echec
 			error: function() {
-				alert("Erreur lors du téléchargement !");
+				// alert("Erreur lors du téléchargement !");
 			}      
 		});
 	
