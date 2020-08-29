@@ -209,10 +209,11 @@ $(window).on('load', function() {
    * Triggers the load of the spreadsheet and map creation
    */
    var mapData;
-   mapData = Tabletop.init({
-   	key: googleDocURL,
-        callback: function(data, mapData) { onMapDataLoad(); }
-   });
+   mapData = Papa.parse(googleDocURL, {
+          download: true,
+          header: true,
+          complete: function(data, mapData) { onMapDataLoad(); }
+        });
 
 
   /**
