@@ -77,11 +77,11 @@ $(window).on('load', function() {
    * Here all data processing from the spreadsheet happens
    */
   function onMapDataLoad() {
-    var options = mapData.sheets(constants.optionsSheetName).elements;
+    //var options = mapData.sheets(constants.optionsSheetName).elements;
     createDocumentSettings(options);
     document.title = getSetting('_mapTitle');
     // Add point markers to the map
-    var points = mapData.sheets(constants.pointsSheetName);
+    //var points = mapData.sheets(constants.pointsSheetName);
     if (points && points.elements.length > 0) {
       determineLayers(points.elements);
       mapPoints(points.elements);
