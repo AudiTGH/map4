@@ -208,8 +208,8 @@ $(window).on('load', function() {
   /**
    * Triggers the load of the spreadsheet and map creation
    */
-	$.ajax({
-             var parse = function(res) {
+	
+          var parse = function(res) {
             return Papa.parse(Papa.unparse(res[0].values), {header: true} ).data;
           }
 
@@ -242,9 +242,8 @@ $(window).on('load', function() {
               })
               
             }
-          )
+          );
 
-	});
 	
 	
 	
