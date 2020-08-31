@@ -17,7 +17,8 @@ urls.push('https://docs.google.com/spreadsheets/d/1EVR6zqtjuGV_mX0AmGxtdRdQzZ8sW
 var number = getUrlVars()["u"];
 //var googleDocURL = urls[number]; 
 */
-var googleDocURL = 'https://docs.google.com/spreadsheets/d/1-13FgMNZeeuIOrEVenv3qhKwEt2_NflG_7FQKGY9KoE/edit#gid=0';
+//var googleDocURL = 'https://docs.google.com/spreadsheets/d/1-13FgMNZeeuIOrEVenv3qhKwEt2_NflG_7FQKGY9KoE/edit#gid=0'; // ok
+var googleDocURL = 'https://docs.google.com/spreadsheets/d/1EVR6zqtjuGV_mX0AmGxtdRdQzZ8sW4u82tR-gpTecyo/edit#gid=0'; // test
 //var googleApiKey = 'AIzaSyBuCCp_xVL36St8f8sn9InouC2eqMDjB8I'; // mien
 var googleApiKey = 'AIzaSyCkSgBDkgcdnoqBGPnmPqiNjhUpV_e02gI' // mien n°2
 //var googleApiKey = 'AIzaSyBh9nKnVZm2RPeZa0ywCOxPAgJJfK87WhY'; // leur
