@@ -208,13 +208,45 @@ $(window).on('load', function() {
   /**
    * Triggers the load of the spreadsheet and map creation
    */
-   var mapData;
-   mapData = Papa.parse(googleDocURL, {
-          download: true,
-          header: true,
-          complete: function(data, mapData) { onMapDataLoad(); }
-        });
+             var parse = function(res) {
+            return Papa.parse(Papa.unparse(res[0].values), {header: true} ).data;
+          }
 
+          var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
+          var spreadsheetId = googleDocURL.indexOf('/d/') > 0
+            ? googleDocURL.split('/d/')[1].split('/')[0]
+            : googleDocURL
+
+          $.getJSON(
+            apiUrl + spreadsheetId + '?key=' + googleApiKey
+          ).then(function(data) {
+              var sheets = data.sheets.map(function(o) { return o.properties.title })
+
+              if (sheets.length === 0 || !sheets.includes('Options')) {
+                'Could not load data from the Google Sheet'
+              }
+
+              // read 2 sheets: Options and Points
+              $.when(
+                $.getJSON(apiUrl + spreadsheetId + '/values/Options?key=' + googleApiKey),
+                $.getJSON(apiUrl + spreadsheetId + '/values/Points?key=' + googleApiKey),
+           
+              ).done(function(options, points) {
+				onMapDataLoad(
+                      parse(options),
+                      parse(points)
+            
+                    )
+
+              })
+              
+            }
+          )
+
+	
+	
+	
+	
 
   /**
    * Reformulates documentSettings as a dictionary, e.g.
