@@ -76,7 +76,7 @@ $(window).on('load', function() {
   /**
    * Here all data processing from the spreadsheet happens
    */
-  function onMapDataLoad() {
+  function onMapDataLoad(options, points) { 
     //var options = mapData.sheets(constants.optionsSheetName).elements;
     createDocumentSettings(options);
     document.title = getSetting('_mapTitle');
