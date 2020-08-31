@@ -82,9 +82,9 @@ $(window).on('load', function() {
     document.title = getSetting('_mapTitle');
     // Add point markers to the map
     //var points = mapData.sheets(constants.pointsSheetName);
-    if (points && points.elements.length > 0) {
-      determineLayers(points.elements);
-      mapPoints(points.elements);
+    if (points && points.length > 0) {
+      determineLayers(points);
+      mapPoints(points);
     } else {
       completePoints = true;
     }
