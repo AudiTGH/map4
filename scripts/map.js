@@ -215,7 +215,7 @@ $(window).on('load', function() {
             return Papa.parse(Papa.unparse(res[0].values), {header: true} ).data;
           }
 
-          var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
+          var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/' ;
           var spreadsheetId = googleDocURL.indexOf('/d/') > 0
             ? googleDocURL.split('/d/')[1].split('/')[0]
             : googleDocURL
