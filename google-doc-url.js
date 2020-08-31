@@ -1,4 +1,4 @@
-
+/*
 // returns params set in URL
 function getUrlVars() {
   var vars = {};
@@ -16,5 +16,6 @@ urls.push('https://docs.google.com/spreadsheets/d/1EVR6zqtjuGV_mX0AmGxtdRdQzZ8sW
 
 var number = getUrlVars()["u"];
 //var googleDocURL = urls[number]; 
+*/
 var googleDocURL ='https://docs.google.com/spreadsheets/d/1EVR6zqtjuGV_mX0AmGxtdRdQzZ8sW4u82tR-gpTecyo/edit#gid=0';
 Var googleApiKey ='AIzaSyBuCCp_xVL36St8f8sn9InouC2eqMDjB8I';
