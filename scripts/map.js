@@ -23,7 +23,7 @@ $(window).on('load', function() {
     var ColorLegend = getSetting('_ColorLegend');	  
     if (Object.keys(ColorlayerNames).length > 1 ) {
 		AddColorGroup = true;
-		overLayers.push({group: '<b>' & 'ColorLegend' & '</b>', layers:[]});
+		overLayers.push({group: '<b>' + ColorLegend + '</b>', layers:[]});
 		for (var i in ColorlayerNames) {
 		  var layerName = ColorlayerNames[i].Name;
 		  var LayerObj = L.layerGroup();
