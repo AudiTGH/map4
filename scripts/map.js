@@ -16,7 +16,7 @@ $(window).on('load', function() {
       var ColorName = point.GroupColor;
 	  ColorlayerNames[ColorName] = {Name: ColorName, Icon :'<i class="fa fa-file" style="color: '+ point.Color + '">&nbsp;&nbsp;'};
       
-	  var SideName = point.GroupSides;
+	  var SideName = point.GroupForm;
 	  SideslayerNames[SideName] = {Name: SideName, Icon :'<img src="icons/' + point.Sides + '.png" class="markers-legend-icon">&nbsp;&nbsp;'};
     } 
     
