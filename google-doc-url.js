@@ -17,4 +17,5 @@ urls.push('https://docs.google.com/spreadsheets/d/1EVR6zqtjuGV_mX0AmGxtdRdQzZ8sW
 
 var googleApiKey = 'AIzaSyCkSgBDkgcdnoqBGPnmPqiNjhUpV_e02gI' // mien n°2
 var number = getUrlVars()["u"];
-var googleDocURL = urls[number]; 
+//var googleDocURL = urls[number]; 
+var googleDocURL = getUrlVars()["u"];
