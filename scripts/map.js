@@ -33,10 +33,10 @@ $(window).on('load', function() {
 		}
 	}
 
-
+	var FormLegend = getSetting('_FormLegend');
 	if (Object.keys(SideslayerNames).length > 1 ) {
 		AddSidesGroup = true;
-		overLayers.push({group: '<b>Sides</b>', layers:[]});
+		overLayers.push({group: '<b>' + FormLegend + '</b>', layers:[]});
 		for (var i in SideslayerNames) {
 		  var layerName = SideslayerNames[i].Name;
 		  var LayerObj = L.layerGroup();
