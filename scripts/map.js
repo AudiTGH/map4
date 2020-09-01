@@ -19,10 +19,11 @@ $(window).on('load', function() {
 	  var SideName = point.GroupSides;
 	  SideslayerNames[SideName] = {Name: SideName, Icon :'<img src="icons/' + point.Sides + '.png" class="markers-legend-icon">&nbsp;&nbsp;'};
     } 
-
+    
+    var ColorLegend = trySetting('ColorLegend', 'Coloriii');	  
     if (Object.keys(ColorlayerNames).length > 1 ) {
 		AddColorGroup = true;
-		overLayers.push({group: '<b>'& trySetting('ColorLegend', 'Coloriii') &'</b>', layers:[]});
+		overLayers.push({group: '<b>'& ColorLegend &'</b>', layers:[]});
 		for (var i in ColorlayerNames) {
 		  var layerName = ColorlayerNames[i].Name;
 		  var LayerObj = L.layerGroup();
