@@ -20,7 +20,7 @@ $(window).on('load', function() {
 	  SideslayerNames[SideName] = {Name: SideName, Icon :'<img src="icons/' + point.Sides + '.png" class="markers-legend-icon">&nbsp;&nbsp;'};
     } 
     
-    var ColorLegend = trySetting('_ColorLegend', 'Coloriii');	  
+    var ColorLegend = getSetting('_ColorLegend');	  
     if (Object.keys(ColorlayerNames).length > 1 ) {
 		AddColorGroup = true;
 		overLayers.push({group: '<b>' & ColorLegend & '</b>', layers:[]});
