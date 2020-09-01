@@ -22,7 +22,7 @@ $(window).on('load', function() {
 
     if (Object.keys(ColorlayerNames).length > 1 ) {
 		AddColorGroup = true;
-		overLayers.push({group: '<b>Colors</b>', layers:[]});
+		overLayers.push({group: '<b>'& trySetting('ColorLegend', 'Coloriii') &'</b>', layers:[]});
 		for (var i in ColorlayerNames) {
 		  var layerName = ColorlayerNames[i].Name;
 		  var LayerObj = L.layerGroup();
@@ -195,7 +195,7 @@ $(window).on('load', function() {
    * Returns the value of setting named s from constants.js
    * or def if setting is either not set or does not exist
    * Both arguments are strings
-   * e.g. trySetting('_authorName', 'No Author')
+   * e.g. trySetting('ColorLegend', 'Color')
    */
   function trySetting(s, def) {
     s = getSetting(s);
