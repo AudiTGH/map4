@@ -114,7 +114,7 @@ $(window).on('load', function () {
             completePoints = true;
         }
 
-        L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {attribution: 'Map tiles by Stamen Design - Inspired by handsondataviz.org', subdomains: 'abcd', minZoom: 0, maxZoom: 20, ext: 'png'}).addTo(map);
+        L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {attribution: 'Map tiles by Stamen Design | Inspired by handsondataviz.org', subdomains: 'abcd', minZoom: 0, maxZoom: 20, ext: 'png'}).addTo(map);
 	    
         var panelLayers = new L.Control.PanelLayers(null, overLayers, { title: '<h3>Legend</h3>', });
 	    
