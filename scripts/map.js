@@ -205,9 +205,6 @@ $(window).on('load', function () {
         }).data;
     }
 
-    var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/';
-    var spreadsheetId = googleDocURL.indexOf('/d/') > 0 ? googleDocURL.split('/d/')[1].split('/')[0] : googleDocURL;
-
     $.getJSON(apiUrl + spreadsheetId + '?key=' + googleApiKey).then(function (data) {
 		var sheets = data.sheets.map(function (o) {return o.properties.title})
 		if (sheets.length === 0 || !sheets.includes('Options')) {'Could not load data from the Google Sheet'}
