@@ -8,6 +8,6 @@ function getUrlVars() {
   return vars;
 }
 
+var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/';
 var googleApiKey = 'AIzaSyCkSgBDkgcdnoqBGPnmPqiNjhUpV_e02gI' // mien n°2
-var number = getUrlVars()["u"];
 var spreadsheetId  = getUrlVars()["u"];
