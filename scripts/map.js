@@ -114,16 +114,10 @@ $(window).on('load', function () {
             completePoints = true;
         }
 
-        L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
-            attribution: 'Map tiles by Stamen Design',
-            subdomains: 'abcd',
-            minZoom: 0,
-            maxZoom: 20,
-            ext: 'png'
-        }).addTo(map);
-        var panelLayers = new L.Control.PanelLayers(null, overLayers, {
-            title: '<h3>Legend</h3>',
-        });
+        L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {attribution: 'Map tiles by Stamen Design - Inspired by handsondataviz.org', subdomains: 'abcd', minZoom: 0, maxZoom: 20, ext: 'png'}).addTo(map);
+	    
+        var panelLayers = new L.Control.PanelLayers(null, overLayers, { title: '<h3>Legend</h3>', });
+	    
         map.addControl(panelLayers);
 
         map.setView(markersLayer.getBounds().getCenter(), map.getBoundsZoom(markersLayer.getBounds()));
@@ -131,35 +125,22 @@ $(window).on('load', function () {
         addTitle();
 
         // Test : Add search
-        var controlSearch = new L.Control.Search({
-            position: 'topleft',
-            layer: markersLayer,
-            initial: true,
-            zoom: 14,
-            marker: false
-        });
+        var controlSearch = new L.Control.Search({ position: 'topleft', layer: markersLayer, initial: true, zoom: 14, marker: false });
         map.addControl(controlSearch);
         map.removeLayer(markersLayer); // sinon les markers "fictifs" deviennent visibles
 
         // test : Add list markers
-        var list = new L.Control.ListMarkers({
-            layer: markersLayer,
-            itemIcon: null,
-            maxItems: 8,
-            maxZoom: 16
-        });
+        var list = new L.Control.ListMarkers({ layer: markersLayer, itemIcon: null, maxItems: 8, maxZoom: 16 });
         map.addControl(list);
 
         // When all processing is done, make the map visible
         showMap();
 
         function showMap() {
-            if (completePoints) {
-                $('#map').css('visibility', 'visible');
-            } else {
-                setTimeout(showMap, 50);
-            }
+            if (completePoints) {$('#map').css('visibility', 'visible');} 
+	    else {setTimeout(showMap, 50);}
         }
+	    
     }
 
     // functions ...
@@ -186,9 +167,7 @@ $(window).on('load', function () {
     }
 
     // Returns the value of a setting s
-    function getSetting(s) {
-        return documentSettings[constants[s]];
-    }
+    function getSetting(s) {return documentSettings[constants[s]]; }
 
     // Returns the value of a setting s or the default value
     function trySetting(s, def) {
@@ -197,6 +176,7 @@ $(window).on('load', function () {
         return s;
     }
 
+	
     //  load of the spreadsheet and map creation
 
     var parse = function (res) {
